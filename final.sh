@@ -71,8 +71,8 @@ cat > folder-remover.sh << EOF
 #!/bin/bash
 fandf=$FANDF
 while read L1 <&3 && read L2 <&4; do
+    #node deleteFolder.js \$L1 \$L2
     echo "This \$fandf is deleted from \$L1 \$L2 on \$(date)"
-    node deleteFolder.js \$L1 \$L2
 done 3<organization_account.txt 4<organization_repo.txt
 EOF
 chmod +x folder-remover.sh
