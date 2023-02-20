@@ -76,7 +76,8 @@ while read L1 <&3 && read L2 <&4; do
 done 3<organization_account.txt 4<organization_repo.txt
 EOF
 chmod +x folder-remover.sh
-sh folder-remover.sh organization_account.txt organization_repo.txt > folder-deletion-log-$(date).out
+dt=`date '+%d-%m-%Y_%H:%M:%S'`
+sh folder-remover.sh organization_account.txt organization_repo.txt > folder-deletion-log-$dt.out
 
 echo "##Important file paths###############"
 echo "THE ORGANIZATION LIST is saved in organization_list.out"
