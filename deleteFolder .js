@@ -81,7 +81,7 @@ const main = async () => {
     method: 'POST',
     headers,
     data: {
-      message: 'Committing with GitHub\'s API :fire:',
+      message: 'Removing desired folder CI: no build',
       tree: newTreeSha,
       parents: [ currentCommitSha ],
     },
